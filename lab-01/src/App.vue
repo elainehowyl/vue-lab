@@ -7,6 +7,8 @@
     <input type="text" v-model='preferredColor'/>
     <Light></Light>
     <SayGreetings></SayGreetings>
+    <Counter></Counter>
+    <Dice></Dice>
   </div>
 </template>
 
@@ -15,11 +17,13 @@
 import messageBox from "./components/messageBox"
 import Light from "./components/Light"
 import SayGreetings from "./components/SayGreetings"
+import Counter from "./components/Counter"
+import Dice from "./components/Dice"
 
 export default {
   name: 'App',
   components: {
-     messageBox, Light, SayGreetings
+     messageBox, Light, SayGreetings, Counter, Dice
   },
   data: function(){
       return {
