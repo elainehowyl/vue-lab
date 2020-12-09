@@ -1,19 +1,37 @@
 <template>
   <div id="app">
-    <messageBox></messageBox>
-    <h1>Goodbye World</h1>
+    <messageBox message="danger danger" bgcolor="green"></messageBox>
+    <messageBox message="be careful" v-bind:bgcolor="preferredColor"></messageBox>
+    <h1>{{text}}</h1>
+    <button v-on:click="buttonPressed">Click</button>
+    <input type="text" v-model='preferredColor'/>
+    <Light></Light>
+    <SayGreetings></SayGreetings>
   </div>
 </template>
 
 <script>
 
 import messageBox from "./components/messageBox"
+import Light from "./components/Light"
+import SayGreetings from "./components/SayGreetings"
 
 export default {
   name: 'App',
   components: {
-     messageBox
-  }
+     messageBox, Light, SayGreetings
+  },
+  data: function(){
+      return {
+          'text':'',
+          'preferredColor':'azure'
+      }
+  },
+  methods: {
+      'buttonPressed':function(){
+          this.text="You clicked me!"
+      }
+  },
 }
 </script>
 

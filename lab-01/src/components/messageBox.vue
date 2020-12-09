@@ -1,17 +1,17 @@
 <template>
 <!-- inside template, you can only have one parent element -->
  <div>
-     <div>Welcome</div>
-     <div>{{message}}</div>
+     <h1 v-bind:style="{'backgroundColor':bgcolor}">{{message}}</h1>
  </div>
 </template>
 <script>
 export default {
     data: function(){
         return {
-            'message':'very hello world'
+            // 'message':' '
         }
-    }
+    },
+    props:['message', 'bgcolor']
 }
 </script>
 <style scoped>
