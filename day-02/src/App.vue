@@ -3,6 +3,7 @@
      <DataForm></DataForm>
      <SignupForm></SignupForm>
      <FormValidation></FormValidation>
+     <Services></Services>
   </div>
 </template>
 
@@ -11,11 +12,12 @@
 import DataForm from "./components/DataForm"
 import SignupForm from "./components/SignupForm"
 import FormValidation from "./components/FormValidation"
+import Services from "./components/Services"
 
 export default {
   name: 'App',
   components: {
-     DataForm, SignupForm, FormValidation
+     DataForm, SignupForm, FormValidation, Services
   }
 }
 </script>
