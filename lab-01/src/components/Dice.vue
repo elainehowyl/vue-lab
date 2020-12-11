@@ -1,10 +1,20 @@
 <template>
 <div>
     <div v-if="GeneratedNo%2 == 0">
-        <p>{{GeneratedNo}}!</p>
+        <div v-if="GeneratedNo == 6">
+            <p v-bind:style="{'color':'green'}">{{GeneratedNo}}!</p>
+        </div>
+        <div v-else>
+            <p>{{GeneratedNo}}!</p>
+        </div>
     </div>
     <div v-else>
-        <p>{{GeneratedNo}}</p>
+        <div v-if="GeneratedNo == 1">
+           <p v-bind:style="{'color':'red'}">{{GeneratedNo}}</p>
+        </div>
+        <div v-else>
+            <p>{{GeneratedNo}}</p>
+        </div>
     </div>
     <button @click="randomNo">Generate Number</button>
     <!-- <p>{{GeneratedNo}}</p> -->
